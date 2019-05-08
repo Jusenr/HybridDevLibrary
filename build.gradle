@@ -2,13 +2,19 @@
 
 buildscript {
     repositories {
-        google()
+        maven { url 'https://maven.aliyun.com/nexus/content/groups/public/' }
+        maven { url 'https://maven.aliyun.com/nexus/content/repositories/jcenter' }
+        maven { url 'https://maven.aliyun.com/nexus/content/repositories/google' }
+        maven { url 'https://maven.aliyun.com/nexus/content/repositories/apache-snapshots' }
+        maven { url 'https://maven.aliyun.com/nexus/content/repositories/gradle-plugin' }
         jcenter()
-        
+        google()
+        mavenCentral()
+
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.3.2'
-        
+
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
@@ -16,9 +22,29 @@ buildscript {
 
 allprojects {
     repositories {
-        google()
+        maven { url 'https://maven.aliyun.com/nexus/content/groups/public/' }
+        maven { url 'https://maven.aliyun.com/nexus/content/repositories/jcenter' }
+        maven { url 'https://maven.aliyun.com/nexus/content/repositories/google' }
+        maven { url 'https://maven.aliyun.com/nexus/content/repositories/apache-snapshots' }
         jcenter()
-        
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+        flatDir {
+            dirs 'libs'
+        }
+    }
+    tasks.withType(JavaCompile) {
+        options.encoding = "UTF-8"
+    }
+}
+
+subprojects {
+    configurations.all {
+        resolutionStrategy {
+            force 'com.android.support:appcompat-v7:28.0.0'
+            force 'com.android.support:design:28.0.0'
+        }
     }
 }
 
