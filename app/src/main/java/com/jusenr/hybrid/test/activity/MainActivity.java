@@ -7,10 +7,11 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.Button;
 
 import com.jusenr.hybrid.test.R;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,9 +28,19 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        Button btn_1 = findViewById(R.id.btn_1);
+        btn_1.setOnClickListener(this);
+        Button btn_2 = findViewById(R.id.btn_2);
+        btn_2.setOnClickListener(this);
+        Button btn_3 = findViewById(R.id.btn_3);
+        btn_3.setOnClickListener(this);
+        Button btn_4 = findViewById(R.id.btn_4);
+        btn_4.setOnClickListener(this);
     }
 
-    private void onClicked(View v) {
+    @Override
+    public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_1:
                 startActivity(new Intent(this, WebActivity.class));
@@ -45,4 +56,6 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
     }
+
+
 }
