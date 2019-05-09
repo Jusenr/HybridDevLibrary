@@ -1,1 +1,3 @@
 include ':app', ':mbsweb_chrome'
+include ':mbswebplugin_chrome', ':AILIYUN_PLAY_SkinLibrary', ':pickphotoview', ':umLibrary'
+

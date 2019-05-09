@@ -8,8 +8,12 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/AILIYUN_PLAY_SkinLibrary" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/mbsweb_chrome" />
+            <option value="$PROJECT_DIR$/mbswebplugin_chrome" />
+            <option value="$PROJECT_DIR$/pickphotoview" />
+            <option value="$PROJECT_DIR$/umLibrary" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
