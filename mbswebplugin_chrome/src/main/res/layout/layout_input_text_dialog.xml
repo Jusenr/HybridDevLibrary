@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/rLayout_bg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:background="@color/white">
+
+    <Button
+        android:id="@+id/btn_cancel0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:background="@null"
+        android:text="@string/cancel"
+        android:textColor="#4F4F4F"
+        android:textSize="12sp"/>
+
+    <Button
+        android:id="@+id/btn_send0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:background="@null"
+        android:text="@string/send"
+        android:textColor="#4F4F4F"
+        android:textSize="12sp"/>
+
+    <EditText
+        android:id="@+id/edit_input0"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/btn_cancel0"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/shape_pinlun"
+        android:ellipsize="end"
+        android:gravity="left"
+        android:inputType="textMultiLine"
+        android:lines="3"
+        android:minLines="3"
+        android:padding="5dp"
+        android:scrollHorizontally="false"
+        android:textColor="#000000"
+        android:textSize="14sp"/>
+
+</RelativeLayout>

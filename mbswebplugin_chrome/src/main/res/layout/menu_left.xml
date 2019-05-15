@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 右 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/ll_right"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+    <LinearLayout
+        android:id="@+id/ll_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_head_left"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:scaleType="centerInside"
+            android:src="@drawable/back"
+            android:visibility="visible"/>
+
+        <TextView
+            android:id="@+id/tv_head_left"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="6dp"
+            android:paddingRight="10dp"
+            android:text=""
+            android:textColor="@color/mbs_web_plugin_title_color"
+            android:visibility="invisible"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_left"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:paddingTop="4dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_head_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:src="@drawable/nav_caidan"/>
+
+        <com.mobisoft.mbswebplugin.view.CircleImageView.CircleImageView
+            android:id="@+id/iv_head"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/iv_head_setting"/>
+
+        <com.mobisoft.mbswebplugin.view.MessageView.MBSMsgView
+            xmlns:mv="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/left_msg_tip"
+            android:layout_width="9dp"
+            android:layout_height="9dp"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/iv_head"
+            android:layout_toRightOf="@+id/iv_head"
+            android:gravity="center"
+            android:textColor="#ffffff"
+            android:textSize="11.5sp"
+            android:visibility="visible"
+            mv:mbs_mv_backgroundColor="#F13837"
+            mv:mbs_mv_isRadiusHalfHeight="true"
+            mv:mbs_mv_strokeColor="#ffffff"
+            mv:mbs_mv_strokeWidth="0dp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
